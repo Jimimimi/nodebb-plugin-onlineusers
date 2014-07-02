@@ -1,0 +1,17 @@
+{
+    "id": "nodebb-plugin-onlineusers",
+    "name": "Online Users",
+    "description": "A nodebb plugin that displays the online users.",
+    "url": "https://github.com/XarisA/nodebb-plugin-onlineusers",
+    "library": "./library.js",
+    "staticDirs": {
+        "images": "./public"
+    },
+    "less": [
+        "assets/style.less"
+    ],
+    "hooks": [
+        { "hook": "filter:post.save", "method": "filter" },
+        { "hook": "action:post.save", "method": "emailme" }
+    ]
+}
